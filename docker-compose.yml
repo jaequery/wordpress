@@ -1,0 +1,13 @@
+wordpress:
+  image: wordpress
+  links:
+    - db:mysql
+  environment:
+    - VIRTUAL_HOST=wp.docker
+  expose:
+  - 80
+
+db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: example
